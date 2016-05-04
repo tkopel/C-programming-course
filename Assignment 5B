@@ -1,0 +1,87 @@
+/*Written Assignment 5 Part B Question 1*/
+/*September 15 COS 116 OL 011*/
+/*This program will allow a user to enter 5 integers into a structure creating a linked list. 
+After user entry is complete, the user will then be prompted to make one additional entry into the linked list.*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+/*Declaring structure and naming variables to be used*/
+struct number
+{
+int value;
+struct number *nextValue;
+};
+typedef struct number NUM;	/*typedef statement to short cut the struct number to simply 'NUM'*/
+
+int main()
+{
+	/*The following is a sequential step of directions for the program to follow with specific functions along the way
+	First user instructions are printed. 
+	A value of 1 is assigned to my counter variable 'val'.
+	A function that allows user entry is next. -void create()-
+	A function that prints the user entered data is next. -void print()-
+	A function that allows user entry of one additional value is next. -void ADD1-
+	The functions are then called upon and the program completes.*/
+	
+printf("Please enter integers one at a time to be recorded. You will enter a total of 5 and then will be prompted to add a 6th.\n\n");
+NUM *head; /*stores entire structure in pointer *head */
+int val=1;
+void create(NUM *p,int);
+void print(NUM *p); 
+void ADD1(NUM *p);
+head = (NUM *)malloc(sizeof(NUM));
+create(head,val);
+printf("\nIntegers entered in the Linked List are:\n");
+print(head);
+ADD1(head);
+printf("\nAfter Adding a new Integer the Linked List is:\n");
+print(head);
+return 0;
+}
+
+void create(NUM *catalog,int val) /*pointer *catalog has been declared to store and pass data entry*/
+{
+printf("Integer %d : ",val); /*prompts user entry for integer values to be placed into the structure*/
+scanf("%d",&catalog->value); /*allows for user entry*/
+if(val==5)/*once 5 values have been entered the user entry prompting will end.*/
+{
+catalog->nextValue=NULL;
+}
+else
+{
+catalog->nextValue = (NUM *)malloc(sizeof(NUM));
+create(catalog->nextValue,++val); /*after each number entry, 1 will be added to the counter val, once val has reached a total of 5, user entry will end*/
+}
+}
+
+void print(NUM *catalog) /* declaring directions for a print function.*/
+{
+if(catalog->nextValue!=NULL) 
+{
+printf("%d\t",catalog->value); /* '\t' allows for the display to have a tab space between each entry*/
+if(catalog->nextValue->nextValue == NULL)
+printf("%d\t",catalog->nextValue->value);
+print(catalog->nextValue);
+}
+}
+
+void ADD1(NUM *catalog) /*this function allows for a user entry of an additional integer into the structure*/
+{
+NUM *n;
+int num;
+
+if(catalog->nextValue!=NULL)
+{
+ADD1(catalog->nextValue);
+}
+else
+{
+printf("\n\nEnter an Integer to be Inserted: "); /*user prompt for entry of new integer*/
+scanf("%d",&num);
+n = (NUM *)malloc(sizeof(NUM));
+n->value=num;
+n->nextValue=catalog->nextValue;
+catalog->nextValue=n;
+}
+}
