@@ -1,0 +1,58 @@
+/*Taylor Kopel*/
+/*Mentor: David Parker*/
+/*Written Assignment 6 Part B Question 1*/
+/*September 15 COS 116 OL 011*/
+/*Create a set/list of enumerated constants called week that contains the days 
+of the week. Have a variable called today that is of type week. Assign a value to today. 
+If the day is Monday through Friday, print "Go to work!" If the day is Saturday or Sunday, print "You can rest today!"*/
+
+
+
+#include <stdio.h> 
+
+enum week{ Monday=0,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday }; /*creates enumerated list for week*/
+
+int main() 
+{ 
+    enum week today; /*declares variable today that is of type week*/
+    int day; 
+
+/* user instructions and a prompt for data entry*/
+
+	printf("Monday = 0\nTuesday = 1\nWednesday = 2\nThursday = 3\nFriday = 4\nSaturday = 5\nSunday = 6\n\n");
+    printf("Enter the integer corresponding to current the day of the week: "); 
+    scanf("%d", &day); 
+
+    /*if the value entered equals 0 - 6 it will correspond with the day of the week it is paired with.
+	once the value has been matched with a day of the week it will break from the switch loop and go to the if else statement*/
+	switch (day) 
+    
+    { 
+      case 0: today = Monday; 
+	  	break; 
+      case 1: today = Tuesday; 
+	  	break; 
+      case 2: today = Wednesday; 
+	  	break; 
+      case 3: today = Thursday; 
+	  	break; 
+      case 4: today = Friday; 
+	  	break; 
+      case 5: today = Saturday; 
+	  	break; 
+      case 6: today = Sunday; 
+	  	break; 
+    } 
+ /*if the number entered is less than 5, it is a week day and you should go to work*/
+    if (today < 5) 
+    { 
+        printf("\nGo to work!"); 
+    } 
+/*if the number entered is greater than 5, it is a weekend and you can rest*/
+    else 
+    { 
+        printf("\nYou can rest today!"); 
+    } 
+
+    return 0; 
+}
