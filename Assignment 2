@@ -1,0 +1,39 @@
+/*Written Assignment Part A Question 1*/
+/*September 15 COS 116 OL 011*/
+
+/*This program will allow the user to enter a single digit between 0 and 9. The program will display the integer as a written word.*/
+
+#include <stdio.h>
+int main()
+{
+	float digit; /*variable created called digit. it is an integer value*/
+	
+	printf("Enter a single digit between 0 and 9: "); /*Instructions for the user*/
+	scanf("%f", &digit); /*allows the user to input a number for the variable digit*/
+	
+	if (digit == 0) /*if the value entered for digit equals x then display y*/
+		printf("\nThe digit you entered is zero.\n");
+	else if (digit == 1) /*proceeds down these statements until the value entered for digit is found*/
+		printf("\nThe digit you enetered is one.\n");
+	else if (digit == 2)
+		printf("\nThe digit you entered is two.\n");
+	else if (digit == 3)
+		printf("\nThe digit you entered is three.\n");
+	else if (digit == 4)
+		printf("\nThe digit you entered is four.\n");
+	else if (digit == 5)
+		printf("\nThe digit you entered is five.\n");
+	else if (digit == 6)
+		printf("\nThe digit you entered is six.\n");
+	else if (digit == 7)
+		printf("\nThe digit you entered is seven.\n");
+	else if (digit == 8)
+		printf("\nThe digit you entered is eight.\n");
+	else if (digit == 9)
+		printf("\nThe digit you entered is nine.\n");
+	else /*if value entered for digit does not equal any of the above the following message will be displayed*/
+		printf("\nAn invalid digit was entered.\n");
+		
+		getchar(); /*requires you to press a key to continue*/
+		return 0;
+}
