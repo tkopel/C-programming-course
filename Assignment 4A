@@ -1,0 +1,111 @@
+/*Written Assignment 4 Part A Question 1*/
+/*September 15 COS 116 OL 011*/
+/*This program will allow user to enter values into a 5x5 table and compute the sums of each row and each column*/
+
+#include <stdio.h>
+
+int main()
+{
+	printf("This program will calculate the sum of each row and the sum of each column in a virtual 5X5 table.\n\n");
+
+	
+	#define columns 5 /*defines the number of integers stored in each array*/
+	int row1[columns]; /*defines array*/ /* defines variables used for rows and columns*/
+	int row2[columns];
+	int row3[columns];
+	int row4[columns];
+	int row5[columns];
+	int row1sum, row2sum, row3sum, row4sum, row5sum; /*defines sum variables for display later on*/
+	int col1sum, col2sum, col3sum, col4sum, col5sum;
+	
+	/*displays table format*/
+	printf("Consider the following table:\n\n");	
+    printf("      Column 1 | Column 2 | Column 3 | Column 4 | Column 5\n");
+	printf("Row 1|     x    |    x      |     x     |     x     |    x    | \n");
+	printf("Row 2|     x    |    x      |     x     |     x     |    x    |\n");
+	printf("Row 3|     x    |    x      |     x     |     x     |    x    |\n");
+	printf("Row 4|     x    |    x      |     x     |     x     |    x    |\n");
+	printf("Row 5|     x    |    x      |     x     |     x     |    x    |\n");	
+	
+	/*user instructions for variable value entry*/
+	printf("\nYou will enter integers to replace the X's one row at a time.\nYou will each values one at a time.\nPress ENTER after each integer is entered.");
+	printf("\n\n				*Row 1*\n");
+	
+	printf("Integer Entry:\n");
+	scanf("%d",&row1[0]);
+	scanf("%d",&row1[1]);
+	scanf("%d",&row1[2]);
+	scanf("%d",&row1[3]);
+	scanf("%d",&row1[4]);
+	
+	printf("\n				*Row 2*\n");
+	printf("	              Press ENTER After Each Value \n");
+	printf("Integer Entry:\n");
+	scanf("%d",&row2[0]);
+	scanf("%d",&row2[1]);
+	scanf("%d",&row2[2]);
+	scanf("%d",&row2[3]);
+	scanf("%d",&row2[4]);
+	
+	printf("\n				*Row 3*\n");
+	printf("	              Press ENTER After Each Value \n");
+	printf("Integer Entry:\n");
+	scanf("%d",&row3[0]);
+	scanf("%d",&row3[1]);
+	scanf("%d",&row3[2]);
+	scanf("%d",&row3[3]);
+	scanf("%d",&row3[4]);
+	
+	printf("\n				*Row 4*\n");
+	printf("	              Press ENTER After Each Value \n");
+	printf("Integer Entry:\n");
+	scanf("%d",&row4[0]);
+	scanf("%d",&row4[1]);
+	scanf("%d",&row4[2]);
+	scanf("%d",&row4[3]);
+	scanf("%d",&row4[4]);
+	
+	printf("\n				*Row 5*\n");
+	printf("	              Press ENTER After Each Value \n");
+		printf("Integer Entry:\n");
+	scanf("%d",&row5[0]);
+	scanf("%d",&row5[1]);
+	scanf("%d",&row5[2]);
+	scanf("%d",&row5[3]);
+	scanf("%d",&row5[4]);
+	
+	/*displays table with user entered values*/
+	printf("      Column 1 | Column 2 | Column 3 | Column 4 | Column 5\n");
+	printf("Row 1|    %d    |   %d      |    %d     |    %d     |   %d    \n",row1[0],row1[1],row1[2],row1[3],row1[4]);
+	printf("Row 2|    %d    |   %d      |    %d     |    %d     |   %d    \n",row2[0],row2[1],row2[2],row2[3],row2[4]);
+	printf("Row 3|    %d    |   %d      |    %d     |    %d     |   %d    \n",row3[0],row3[1],row3[2],row3[3],row3[4]);
+	printf("Row 4|    %d    |   %d      |    %d     |    %d     |   %d    \n",row4[0],row4[1],row4[2],row4[3],row4[4]);
+	printf("Row 5|    %d    |   %d      |    %d     |    %d     |   %d    \n",row5[0],row5[1],row5[2],row5[3],row5[4]);
+	
+	/*functions to calculate row sums*/
+	row1sum =row1[0]+row1[1]+row1[2]+row1[3]+row1[4];
+	row2sum =row2[0]+row2[1]+row2[2]+row2[3]+row2[4];
+	row3sum =row3[0]+row3[1]+row3[2]+row3[3]+row3[4];
+	row4sum =row4[0]+row4[1]+row4[2]+row4[3]+row4[4];
+	row5sum =row5[0]+row5[1]+row5[2]+row5[3]+row5[4];
+	/*functions to caluclate column sums*/
+	col1sum =row1[0]+row2[0]+row3[0]+row4[0]+row5[0];
+	col2sum =row1[1]+row2[1]+row3[1]+row4[1]+row5[1];
+	col3sum =row1[2]+row2[2]+row3[2]+row4[2]+row5[2];
+	col4sum =row1[3]+row2[3]+row3[3]+row4[3]+row5[3];
+	col5sum =row1[4]+row2[4]+row3[4]+row4[4]+row5[4];
+	
+	/*display of results*/
+	printf("\nThe sum of Row 1 is: %d",row1sum);
+	printf("\nThe sum of Row 2 is: %d",row2sum);
+	printf("\nThe sum of Row 3 is: %d",row3sum);
+	printf("\nThe sum of Row 4 is: %d",row4sum);
+	printf("\nThe sum of Row 5 is: %d",row5sum);
+	printf("\n\nThe sum of Column 1 is: %d",col1sum);
+	printf("\nThe sum of Column 2 is: %d",col2sum);
+	printf("\nThe sum of Column 3 is: %d",col3sum);
+	printf("\nThe sum of Column 4 is: %d",col4sum);
+	printf("\nThe sum of Column 5 is: %d",col5sum);
+
+return 0;
+}
