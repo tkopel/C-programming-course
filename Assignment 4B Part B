@@ -1,0 +1,25 @@
+/*Written Assignment 4 Part B Question 1 Part B*/
+/*September 15 COS 116 OL 011*/
+/*This program will display a list of channels declared within an array. Modified so that *channels is used in place of *(channels + i) */
+
+#include <stdio.h>
+#define NUMBERS 7
+ 
+void display(int *);
+ 
+int main()
+{
+     
+int channels[NUMBERS]={2,4,5,7,9,11,13}; /*declares array*/
+printf("Channels:");
+display(channels); 
+}
+void display(int *channels)
+{
+    int i;
+     for(i=0;i<NUMBERS;i++)
+     {
+          printf("%5d",*channels); /*displays array*/
+          *channels++;
+              }
+     }
