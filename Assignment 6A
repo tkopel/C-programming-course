@@ -1,0 +1,37 @@
+/*Written Assignment 6 Part A Question 1*/
+/*September 15 COS 116 OL 011*/
+/*Have a program prompt the user for a filename to open. 
+Change every alphabetic character in the file to a capital letter. 
+Numbers and special characters should not be changed. Print the output to the screen. */
+
+#include <stdio.h> 
+#include <ctype.h> 
+#include <string.h> 
+
+#define MaxLengthOfLine 1000
+int MLOL = MaxLengthOfLine; /*defines the max line length to be 1000 characters and provides an acronym for ease of reference*/
+
+
+int main(int argc, char *argv[]) 
+
+{ 
+    FILE *inFile; /* creates a pointer to FILE*/
+    char file[MLOL], c; 
+    printf("This program will allow you to enter a file name and all of the character values located within that file will be printed in uppercase.\n\n");
+    printf("Enter filename: "); 
+    fgets(file,MLOL,stdin); /*calls for the file named through user input and limits the characters printed to the max line length*/
+    *(strchr(file,'\n')) = '\0'; 
+    if ((inFile = fopen(file,"r")) != NULL) /* if file is found, continue*/
+	{ 
+        while ((c = fgetc(inFile)) != EOF) /* if files is found, changes characters to uppercase one by one until the last value in the file has been run through the loop*/
+			{ 
+            putchar(toupper(c)); /*command to change characters to uppercase*/
+       		} 
+        fclose(inFile); 
+   		} 
+	else 
+	{ 
+        printf("\n%s not found.\n",file); /* If file is not found, print this message*/
+    } 
+    return 0; 
+} 
