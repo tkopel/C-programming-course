@@ -1,0 +1,64 @@
+/*Final Question 1*/
+/*September 15 COS 116 OL 011*/
+
+/*Begin this program by creating two arrays of integers, each holding ten elements of data. 
+Create a third array of integers for a result array. Your main program will take the two arrays of 
+integers and pass them to the function subtract(). Inside the function, subtract the first array 
+from the second array and put the difference into the third array. Print the values of all three arrays back in the main program*/
+
+#include<stdio.h>
+#define MAX 10 /*limits size of array element to 10 digits*/
+ 
+
+ 
+void    howMany(int a[],int size) /*a function that allows user to enter elements into each array*/
+{ 
+    int i; 
+    for(i=0;i< size;i++) 
+    { 
+        printf("Enter integer %d :",i+1); /*prompt for user entry*/
+        scanf("%d",&a[i]); 
+    } 
+} 
+ 
+/*  function    : printArray() 
+    to print array elements. 
+*/
+void printArray(int a[],int size)  /* a function that prints the array*/
+{ 
+    int i; 
+    for(i=0;i < size; i++) 
+        printf("%5d",a[i]); 
+} 
+ 
+void subtract(int a[],int b[],int c[],int size) /*the subtract function*/
+{ 
+        int i; 
+        for(i=0; i< size;i++) 
+                c[i]=a[i]-b[i]; 
+} 
+ 
+int main() 
+{ 
+    int A[MAX],B[MAX],SUB[MAX]; 
+    int i,n = 10; 
+  
+ 
+    printf("\nEnter integers of Array 1:\n"); /*instructions for user followed by a call to the howMany function*/
+    howMany(A,n); 
+    printf("\nEnter integers of Array 2:\n"); 
+    howMany(B,n); 
+ 
+    /* subtracts Arrays 1 from Array 2*/
+    subtract(B,A,SUB,n); 
+ 
+ 	/*displays results of program*/
+ 	printf("\nArray 1 is: \n");
+	printArray(A,n);
+	printf("\nArray 2 is: \n");
+	printArray(B,n);
+    printf("\n\nArray elements after subtracting Array 2 by Array 1 is :\n\n"); 
+    printArray(SUB,n); 
+  
+    return 0; 
+} 
