@@ -1,0 +1,52 @@
+/*Midterm Programmin Assignment Problem 2
+September 15 COS 116 OL 011
+
+
+Write a loop using a sentinel value. 
+The sentinel value will be "999" and when this number is entered, the loop will end. 
+The user will enter a number. You will examine the number and determine if it is even or odd. 
+If it is even, you will add one to the even counter. If it is odd, add one to the odd counter.
+When the loop has ended, print out a message telling how many even and odd numbers were entered.*/
+
+#include <stdio.h>
+int main(){
+      
+      /*message to deliver the purpose of the program to the user*/
+	  printf("This program will determine whether a user entered integer is even or odd.");
+	  printf("\nIt will keep a tally of odd numbers and even numbers entered.");
+	  printf("\nTo display the total tally of odd and even numbers, please enter 999.");
+	  
+	  /*defines sentry to be 999, also created integer variables for number entry and even odd number counting*/
+	  #define CUTOFF 999 
+	  int num;
+      int evenCounter, oddCounter;
+      
+      evenCounter = 0; /*defining starting total amount of even numbers and odd numbers to begin at 0*/
+      oddCounter = 0;
+      
+      while (num != CUTOFF) /*initializing loop for all numbers entered that do not match the sentinel*/
+      {
+      printf("\n\nEnter an integer you want to check. To quit enter 999: "); 
+      scanf("%d",&num); /*allows user to enter number*/
+      if((num%2)==0)      /* Checking whether remainder of num is 0 or not. if remainder is 0 then the number is even */
+           {
+           printf("\n%d is even.\n",num);
+           evenCounter++; /*add 1 to the total of even numbers entered*/
+           }
+       
+      else /*if remainder != 0 then number is odd*/
+      {
+           printf("\n%d is odd.\n",num);
+           oddCounter++; /*add 1 to the total of odd numbers entered*/
+       }}
+       
+       while (num == CUTOFF) /*when user enters 999 the tally of odd and even numbers will be displayed*/
+    
+	   {
+
+       	printf("\nThe number of odd integers entered is %d and the number of even integers entered is %d", oddCounter - 1, evenCounter);
+       /*displays the total number of odd number and even numbers. since the sentinel is an odd number, 
+	   1 entry must be subtracted from the odd counter*/
+      return 0;
+  }
+}
