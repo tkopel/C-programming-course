@@ -1,0 +1,151 @@
+/*Written Assignment Part B Question 1*/
+/*September 15 COS 116 OL 011*/
+
+/*This program will allow the user to press a single key on the keyboard and then determine whether or 
+not the character entered is an alphabetic character, digit, or special character*/
+
+#include <stdio.h>
+int main()
+{
+	char fkey; /*defines the character variable fkey*/
+	printf("This program will define your single character input as either a digit,"
+	"\nletter, or special character.\n\nPlease enter a single character to define: "); /*instructions for user*/
+	scanf("%c", &fkey); /*allows user to input character for fkey*/
+	
+	/*If key entered is a-z it will show a result for alphabetic character*/
+	if (fkey == 'a') 
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'b')
+			printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'c')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'd')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'e')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'f')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'g')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'h')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'i')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'j')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'k')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'l')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'm')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'n')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'o')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'p')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'q')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'r')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 's')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 't')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'u')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'v')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'w')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'x')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'y')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'z')
+		printf("\nThe key entered is an alphabetic character", fkey);
+			
+			/*If key entered is A-Z it will show a result for alphabetic character*/
+			else if (fkey == 'A')
+			printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'B')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'C')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'D')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'E')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'F')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'G')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'H')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'I')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'J')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'K')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'L')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'M')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'N')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'O')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'P')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'Q')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'R')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'S')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'T')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'U')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'V')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'W')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'X')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'Y')
+		printf("\nThe key entered is an alphabetic character", fkey);
+		else if (fkey == 'Z')
+		printf("\nThe key entered is an alphabetic character", fkey);
+
+/*If key entered is a digit between 0 and 9 it will show a result for digit*/
+	else if (fkey == '0')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '1')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '2')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '3')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '4')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '5')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '6')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '7')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '8')
+			printf("\nThe key entered is a digit",fkey);
+			else if (fkey == '9')
+			printf("\nThe key entered is a digit",fkey);
+			
+		/*If key entered is neither an alphabetic character or digit
+		 it will show a result for special character*/	
+	else		
+			printf("\nThe key entered is a special character",fkey);
+	getchar();
+	return 0;
+}
