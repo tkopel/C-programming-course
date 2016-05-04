@@ -1,0 +1,29 @@
+/*Midterm Programming Assignment Problem 1
+September 15 COS 116 OL 011
+
+
+This program requires the user to enter two floating-point numbers (num1 and num2) from the keyboard. 
+The program will multiply them and display the original two numbers and the calculated floating-point product. 
+The product will be limited to a display of 3 digits after the decimal.*/
+
+#include <stdio.h>
+
+int main()
+{
+	/* creates floating point variable named num1, num2, and product*/
+	float num1, num2, product; 
+    /*informative message for the user about the program*/
+	printf("This program will take two user entered numbers and multiply them together.\n");
+	/*prompts user entry*/
+	printf("\nPlease enter your first number: ");
+	scanf("%f",&num1); /*allows entry of floating num1 variable*/
+	printf("\nPlease enter your second number: ");
+	scanf("%f",&num2);/*allows entry of floating num2 variable*/
+	
+	product = num1 * num2; /*creates arithmatic for floating variable product*/
+
+    /*displays two user entered numbers and product of their multiplication to 3 decimal places.*/	
+	printf("The product of %f and %f is %.3f", num1, num2, product); 
+	
+	return 0;
+}
