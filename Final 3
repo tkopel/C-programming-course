@@ -1,0 +1,25 @@
+/*Final Question 3*/
+/*September 15 COS 116 OL 011*/
+
+/*Write a C program which defines and uses a macro min(x,y) that, when given two numbers, returns the smaller of the two. */
+
+
+
+
+#include <stdio.h>
+
+/*found on page 755 in appendix G of our text*/
+#define min(x,y) (x<y ? x:y) /*defining a macro to determine the smallest integer when variable x and y are compared*/
+
+int main()
+{
+	int firstNum, secNum; /*declaring variables*/
+	printf("Enter two integers to be compared.\n\n"); /*user instruction for data entry*/
+	printf("Number 1:"); /*data entry*/
+	scanf("%d", &firstNum); /*data entry*/
+	printf("\nNumber 2: "); /*data entry*/
+	scanf("%d", &secNum); /*data entry*/
+	printf("The smaller of the two numbers is: %d", min(firstNum,secNum)); /*prompt to display results after comparing the two numbers entered*/
+	
+	return 0;	
+}
