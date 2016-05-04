@@ -1,0 +1,74 @@
+/*Written Assignment 3 Part B Question 1*/
+/*September 15 COS 116 OL 011*/
+
+/*This program will break down the change amount for an entered total of money.
+For some reason it is only accurate for entry values of .25 and above. 
+It will not correctly computer the change for entry values 0.24 and lower. */
+
+#include <stdio.h>
+ 
+void change(float, int *, int*, int*, int*); /*chreate change function*/
+ 
+int main(void)
+{
+    float totalVal;   /*establish variables and their data types*/
+    int quar, dime, nick, pen;
+ 
+ /*run through 1 with given totalVal*/
+    {
+        totalVal = 1.88;
+         
+        change(totalVal, &quar, &dime, &nick, &pen); /*call function*/
+         
+        printf("TOTAL VALUE ENTERED: $%6.2f", totalVal); /*display results*/
+        printf("\n%d quarters", quar);
+        printf("\n%d dimes", dime);
+        printf("\n%d nickels", nick);
+        printf("\n%d pennies", pen);
+        
+    }
+ 
+ /*run through 2 with given totalVal*/
+    {
+        totalVal = 0.32;
+         
+        change(totalVal, &quar, &dime, &nick, &pen); /*call function*/
+         
+         printf("\nTOTAL VALUE ENTERED: $%6.2f", totalVal); /*display results*/
+        printf("\n%d quarters", quar);
+        printf("\n%d dimes", dime);
+        printf("\n%d nickels", nick);
+        printf("\n%d pennies", pen);
+        
+    }
+ /*run through 3 with user entry for totalVal*/
+    {
+        printf("\n\nEnter the amount of money desired to calculate change for:  \n");
+            scanf("%f", &totalVal); /*call for user entry*/
+         
+        change(totalVal, &quar, &dime, &nick, &pen); /*call function*/
+         
+         printf("\nTOTAL VALUE ENTERED: $%6.2f", totalVal); /*display results*/
+        printf("\n%d quarters", quar);
+        printf("\n%d dimes", dime);
+        printf("\n%d nickels", nick);
+        printf("\n%d pennies", pen);
+        
+    }
+}
+void change(float totalVal, int *q, int *d, int *n, int *p) /*passes variables through change calculations then back to their original addresses*/
+{        
+        if( totalVal >= 0.250 )
+            *q = (totalVal/0.250);
+         
+        if( totalVal >= 0.100 )
+            *d = (totalVal - (*q * 0.250))/0.100;
+         
+        if( totalVal >= 0.050 )
+            *n = (totalVal - (*q * 0.250) - (*d * 0.100))/0.050;
+         
+        if( totalVal >= 0.010 )
+            *p = (totalVal - (*q * 0.250) - (*d * 0.100) - (*n * 0.050))/0.010+.005;
+        	
+    return;
+}
