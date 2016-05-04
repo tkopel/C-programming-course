@@ -1,0 +1,37 @@
+/*Written Assignment 5 Part A Question 1*/
+/*September 15 COS 116 OL 011*/
+/* This program will take a string of data entered by the user and seperate it into a character string and integer after being passed through a function. 
+Specifically this program will take a date entered (text and numbers) and convert it into two values: Month and Day.*/
+
+
+
+
+#include<stdio.h>
+int main()
+{
+
+    void separate(char [], char *, int *); /*seperate() function prototype*/
+   
+    #define DSIZE 15
+    char date[DSIZE]; /* defines char array date and sets up enough storage for 15 characters in the string plus \0 */
+    char tempmonth[10]; /*defines char array tempmonth and sets up enough storage for 10 characters in the string plus \0 */
+    int tempday;
+     
+ /*displays user instructions*/
+ 	printf("This program will take a user entered date and seperate it into two values:\nMonth and Day.\n");
+    printf("\nPlease enter a date.(For example: June 14): ");
+      gets(date); /*allows user entry for the value stored in the variable date*/
+    separate(date, tempmonth, &tempday); /*seperate() function is called*/
+ 
+ /*displays results of values stored in tempmonthAddr/tempdayAddr that passed through the seperate() function and those values are stored in tempmonth and tempday*/
+    printf("Month: %s\nDay: %d",tempmonth, tempday); 
+ 
+    return 0;
+}
+ 
+void separate(char date[], char *tempmonthAddr, int *tempdayAddr) /*seperate() function header line*/
+{
+    sscanf(date,"%s %d",tempmonthAddr, tempdayAddr);
+	/*disassembles gets(date) into a char string value and an integer. stores these disassembled values into tempmonthAddr and tempdayAddr 
+	and then passes them back to tempmonth and tempday*/
+}
