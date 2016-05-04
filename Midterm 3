@@ -1,0 +1,48 @@
+/*Midterm Programming Assignment 3*/
+/*September 15 COS 116 OL 011*/
+
+/*Write a program that contains the function measure() that is to accept a long 
+integer number total and the addresses of the integer variables inches, feet, yards, and miles. 
+The passed long integer represents the total number of inches, and the function is to determine 
+the number of miles, yards, feet, and inches in the passed value, writing these values directly 
+into the respective variables declared in the calling function.
+
+This function will be called from the main program and when it returns to main, 
+it will print out the values of inches, feet, yards, and miles.*/
+
+#include <stdio.h>
+ 
+void measure(long, float *, float*, float*, float*); /*create measure function*/
+
+int main(void)
+{
+	long inchEntry; /*establish variables and their data types*/
+	float inch, feet, yards, miles;
+	{
+	
+	printf("\n\nEnter the initial integer of inches desired to be converted\ninto feet, yards, and miles:  \n");
+            scanf("%d", &inchEntry); /*call for user entry of inches to start calculations with*/
+         
+        measure(inchEntry, &inch, &feet, &yards, &miles); /*call function to convert inchEntry into inches, feet, yards, and miles*/
+         
+         printf("\nInitial integer entered: %d", inchEntry); /*display results*/
+        printf("\n%f inches", inch);
+        printf("\n%f feet", feet);
+        printf("\n%f yards", yards);
+        printf("\n%f miles", miles);
+        printf("\n\nPlease press enter to exit.");
+    }
+    
+}
+void measure(long inchEntry, float *i, float *f, float *y, float *m) /*passes variables through measure calculations then back to their original addresses*/
+{        
+            *i = inchEntry/1; /*initial entry is already an integer of inches, so no conversion necessary*/
+         
+            *f = inchEntry/12; /*conversion from inches to feet. there are 12 inches in 1 foot*/
+         
+            *y = inchEntry * 0.027777777777778; /*conversion from inches to yards. 1 inch ~ 0.027777777777778 yards*/
+         
+            *m = inchEntry * 0.000015782828283; /*conversion from inches to miles. 1 inch ~ 0.000015782828283 miles*/
+        	
+    return ;
+}
