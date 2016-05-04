@@ -1,0 +1,47 @@
+/*Taylor Kopel
+Written Assignment 3 Part A Question 3
+September 15 COS 116 OL 011
+
+This program will allow a user to compute the average of integers entered. 
+A sentinel of 999 will be entered to end value entry and compute the average of all integers entered prior.*/
+
+#include <stdio.h>
+int main()
+{
+	#define CUTOFF 999 /*sentinel as defined by the assignment*/
+    float total;     /* sum of integers entered*/      
+    float numCounter;  /* total number of integers entered (or loops completed)*/ 
+    int num;         /*integer entered*/
+    float average;   /*average of integers entered*/
+    printf("Enter Integers to be averaged one at a time.\n\nEnter 999 to compute the average of integers entered.");
+
+/* initialization phase*/
+
+total = 0;         /* initialize total*/
+numCounter = 0;  /*initialize loop counter*/
+
+/* processing phase*/                          
+
+while ( num != CUTOFF )
+{  
+printf("\n\nPlease enter an integer:" );
+scanf("%d", &num);
+total = total + num;            
+numCounter++;  
+     
+}
+
+/*termination phase*/
+
+if (num = CUTOFF) /*if integer entered equals sentinel*/
+{
+/*calculate average of all integers entered. since our sentinel is also an 
+integer it's entry is added to our total and our numCounter. We subtract the integer
+ value of the sentinel from our total and subtract 1 loop from our numCounter*/
+average = (total - 999) / (numCounter - 1);  
+
+printf("The average of the integers entered is %f", average); 
+       }
+	   getchar();
+	   return 0; 
+   }
