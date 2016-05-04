@@ -1,0 +1,25 @@
+Written assignment 1
+Part B question 1
+
+This program will allow you to enter 2 variables, named save1 and save2, and add them together to get a total and also calculate their average.
+*/
+
+#include <stdio.h>
+int main()
+{
+	int save1; /*creating a variable named save2 that will store an integer*/
+	int save2; /*creating a variable named save2 that will store an integer*/
+	int total; /*creating a variable named total that will store the sum of save1 and save2*/
+	int average; /*creating a variable named average that will store the average of the sum of save1 and save2*/
+
+	save1 = 5; /*inputs 5 for the value of save1*/
+	save2 = 2; /*inputs 2 for the value of save2*/
+	total = save1 + save2; /*tells the computer to add save1 and save2 together and input the value into total*/
+	average = total / 2.0; /*tells the computer to divide the value known as total by 2 and input the value into average*/
+	printf("The total sum of save1 and save2 is %d\n", total); /*this will display the number stored as total*/
+	printf("The average of save1 and save2 is %d\n", average); /*this will display the number stored as average*/
+	printf("Press enter to continue \n"); /* this is just an informative prompt*/	
+
+	getchar(); /*requires you to press a key to continue*/
+	return 0;
+}
